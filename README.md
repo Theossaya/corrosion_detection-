@@ -4,7 +4,7 @@ Here’s a clear, factual summary structured like a progress report you can keep
 
 ---
 
-# 🧾 **Day 1 — Dataset Preparation & Baseline Classification Report**
+#  Dataset Preparation & Baseline Classification Report**
 
 **Project:** Corrosion Detection AI
 **Date:** [Insert current date]
@@ -14,9 +14,9 @@ Here’s a clear, factual summary structured like a progress report you can keep
 
 ---
 
-## 1️⃣ Dataset Preparation
+## 1️ Dataset Preparation
 
-### ✅ **Unified Dataset**
+###  **Unified Dataset**
 
 * **Source:** Multiple corrosion annotation datasets merged into a single COCO-style file
   → `data/processed/unified/unified_annotations.json`
@@ -24,7 +24,7 @@ Here’s a clear, factual summary structured like a progress report you can keep
 * **Annotations:** 3056
 * **Classes:** 1 (“corrosion”)
 
-### ✅ **EDA & Visualization**
+###  **EDA & Visualization**
 
 Executed `src/01_eda_and_split.py`
 
@@ -39,7 +39,7 @@ Executed `src/01_eda_and_split.py`
 * Class imbalance negligible since single class.
 * Several fine-grain corrosion spots visible, good data quality.
 
-### ✅ **Dataset Splitting**
+###  **Dataset Splitting**
 
 Random stratified split based on image IDs:
 
@@ -59,7 +59,7 @@ All files validated for missing or broken image links → **No missing files.**
 
 ---
 
-## 2️⃣ Baseline Classifier
+## 2️ Baseline Classifier
 
 **Script:** `src/04_baseline_classifier.py`
 **Architecture:** EfficientNet-B0 (pretrained on ImageNet)
@@ -76,7 +76,7 @@ All files validated for missing or broken image links → **No missing files.**
 
 ---
 
-## 3️⃣ Training Results
+## 3️ Training Results
 
 | Metric     | Best Value (Validation) | Final Value (Test) |
 | ---------- | ----------------------- | ------------------ |
@@ -97,7 +97,7 @@ All files validated for missing or broken image links → **No missing files.**
 
 ---
 
-## 4️⃣ Artifacts Generated
+## 4️ Artifacts Generated
 
 | Type              | File Path                                      |
 | ----------------- | ---------------------------------------------- |
@@ -109,7 +109,7 @@ All files validated for missing or broken image links → **No missing files.**
 
 ---
 
-## 5️⃣ Insights & Next Steps
+## 5️ Insights & Next Steps
 
 **Strengths:**
 
@@ -122,10 +122,11 @@ All files validated for missing or broken image links → **No missing files.**
 * Over-sensitivity to corrosion (class imbalance in support).
 * No segmentation yet → localization uncertain.
 
-**Next Milestone (Day 2):**
+**Next Milestone :**
 
 1. Generate pixel-level masks from annotations.
 2. Implement U-Net baseline segmentation model.
 3. Evaluate IoU and visual overlays.
+
 
 
