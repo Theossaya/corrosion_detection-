@@ -1,0 +1,67 @@
+# Project Configuration
+
+project:
+  name: "corrosion-detection"
+  version: "0.1.0"
+  random_seed: 42
+
+paths:
+  data_root: "data"
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  models: "models"
+  results: "results"
+  logs: "logs"
+
+dataset:
+  image_extensions: [".jpg", ".jpeg", ".png"]
+  split_ratios:
+    train: 0.70
+    val: 0.15
+    test: 0.15
+  
+data_augmentation:
+  resize: [512, 512]
+  train_augmentations:
+    - HorizontalFlip
+    - VerticalFlip
+    - RandomBrightnessContrast
+    - RandomRotate90
+    - Blur
+  
+training:
+  classification:
+    model: "efficientnet_b0"
+    batch_size: 16
+    epochs: 50
+    learning_rate: 0.001
+    optimizer: "adam"
+    early_stopping_patience: 10
+  
+  segmentation:
+    model: "unet"
+    encoder: "resnet34"
+    batch_size: 8
+    epochs: 100
+    learning_rate: 0.0001
+    loss: "dice"
+
+classes:
+  classification:
+    - "no_corrosion"
+    - "corrosion"
+  
+  segmentation:
+    0: "background"
+    1: "mild_corrosion"
+    2: "moderate_corrosion"
+    3: "severe_corrosion"
+
+metrics:
+  classification: ["accuracy", "precision", "recall", "f1"]
+  segmentation: ["iou", "dice", "pixel_accuracy"]
+
+hardware:
+  device: "cuda"  # cuda or cpu
+  num_workers: 4
+  pin_memory: true

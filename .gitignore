@@ -1,0 +1,46 @@
+# ----------------------------------------
+# PYTHON & VENV
+# ----------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# ----------------------------------------
+# ENV / SYSTEM FILES
+# ----------------------------------------
+.DS_Store
+Thumbs.db
+*.log
+
+# ----------------------------------------
+# PROJECT DIRECTORIES (LARGE FILES)
+# ----------------------------------------
+data/
+!data/.gitkeep
+
+models/**/*.pth
+models/**/*.pt
+models/checkpoints/
+!models/.gitkeep
+
+results/**/*.png
+results/**/*.jpg
+results/**/*.json
+results/**/figures/
+!results/.gitkeep
+
+# ----------------------------------------
+# NOTEBOOK JUNK
+# ----------------------------------------
+.ipynb_checkpoints/
+*.checkpoint.ipynb
+
+# ----------------------------------------
+# TORCH / CACHE / TEMP FILES
+# ----------------------------------------
+.cache/
+torch_cache/
+~*

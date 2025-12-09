@@ -1,0 +1,8 @@
+              precision    recall  f1-score   support
+
+No Corrosion     1.0000    0.1667    0.2857         6
+   Corrosion     0.9107    1.0000    0.9533        51
+
+    accuracy                         0.9123        57
+   macro avg     0.9554    0.5833    0.6195        57
+weighted avg     0.9201    0.9123    0.8830        57
