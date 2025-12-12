@@ -1,8 +1,4 @@
 ﻿# corrosion_detection-
-Perfect — this will serve as your **Day 1 Project Log** for *Corrosion Detection AI*.
-Here’s a clear, factual summary structured like a progress report you can keep in your repo or README.
-
----
 
 #  Dataset Preparation & Baseline Classification Report**
 
@@ -127,6 +123,7 @@ All files validated for missing or broken image links → **No missing files.**
 1. Generate pixel-level masks from annotations.
 2. Implement U-Net baseline segmentation model.
 3. Evaluate IoU and visual overlays.
+
 
 
 
